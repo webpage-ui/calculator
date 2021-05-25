@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="static/scss/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form  action="#" onsubmit="EvaluateMathOperation();return false;" class="calculator" name="calculator" id="calculator">
+            <input type="text" class="text-box" name="text" id="operation">
+            <span class="number clear" onclick="document.calculator.text.value = ''">c</span>
+            <span class="number" onclick="document.calculator.text.value += '/'">/</span>
+            <span class="number" onclick="document.calculator.text.value += '*'">*</span>
+            <span class="number" onclick="document.calculator.text.value += '7'">7</span>
+            <span class="number" onclick="document.calculator.text.value += '8'">8</span>
+            <span class="number" onclick="document.calculator.text.value += '9'">9</span>
+            <span class="number" onclick="document.calculator.text.value += '-'">-</span>
+            <span class="number" onclick="document.calculator.text.value += '4'">4</span>
+            <span class="number" onclick="document.calculator.text.value += '5'">5</span>
+            <span class="number" onclick="document.calculator.text.value += '6'">6</span>
+            <span class="number plus" onclick="document.calculator.text.value += '+'">+</span>
+            <span class="number" onclick="document.calculator.text.value += '1'">1</span>
+            <span class="number" onclick="document.calculator.text.value += '2'">2</span>
+            <span class="number" onclick="document.calculator.text.value += '3'">3</span>
+            <span class="number" onclick="document.calculator.text.value += '0'">0</span>
+            <span class="number" onclick="document.calculator.text.value += '.'">.</span>
+            <span class="number equal" onclick="EvaluateMathOperation(); return false;">=</span>
+        </form>
+    </div>
+    <script src="static/js/calculator.js"></script>
+    <script type="text/javascript" src="static/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 15, 
+            speed: 400, 
+            glare: true,
+            "max-glare": 0.2,
+        })
+    </script>
+</body>
+</html>
